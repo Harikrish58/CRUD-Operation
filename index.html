@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO app</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="shortcut icon"
+      href="https://img.freepik.com/premium-vector/todo-app-icon_1076610-59732.jpg"
+      type="TODO"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <h1 class="text-center mb-3 fw-bolder">My To Do</h1>
+      <div id="addnew" data-bs-toggle="modal" data-bs-target="#form">
+        <i class="fa-solid fa-calendar-plus" style="color: #6e5ba6"></i>&nbsp;&nbsp;&nbsp;
+        <span >Add New To Do</span>        
+      </div>
+      <form
+        class="modal fade"
+        id="form"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color:#3303c4;">
+                Add your task
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <label for="textInput" >Task Title</label>
+              <input type="text" class="form-control" id="textInput" />
+              <div id="msg"></div>
+              <br />
+              <label for="dateInput">Due date</label>
+              <input type="date" class="form-control" id="dateInput" min="" /><br />
+              <label for="timeInput">Due time</label>
+              <input type="time" class="form-control" id="timeInput" min=""/><br />
+              <label for="textarea">Task Details</label>
+              <textarea
+                name="textarea"
+                class="form-control"
+                id="textarea"
+                cols="30"
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" id="add" class="btn btn-primary">
+                Add Task
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <h4 class="text-center mb-3 fw-bolder">Task details</h4>
+      <div id="tasks"></div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/2017117d95.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
